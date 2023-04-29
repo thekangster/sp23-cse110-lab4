@@ -53,5 +53,68 @@
     E. student.courseLoad[0]
     ```
 
-13. A returns '32' because 
+13. A returns `'32'` because the number `2` will be converted into a string and
+    concatenate `'3'` with `2`. 
+
+    B returns `1` because the operation is subtraction, which will convert the
+    string `'3'` into an integer `3`.
+
+    C returns `3` because null is converted into a number with value `0`.
+
+    D returns `'3null'` because `'3'` is a string and `null` will convert into
+    string `'null'` when concatenated.
+
+    E returns `4` because `true` is converted into the number `1`.
+
+    F returns `0` because both `false` and `null` are converted into the number
+    `0`.
+
+    G returns `'3undefined'` because `undefined` will be converted to the
+    string `'undefined'` when concatenated.
+
+    H returns `NaN` because we are trying to subtract `undefined`, which is not
+    converted to a number. 
+
+14. A returns `true` because when comparing values of different types, values
+    are converted into numbers.
+
+    B returns `false` because the comparison is alphabetical, where the string `'1'` is before `'2'`.
+
+    C returns `true` because the string `'2'` is converted to a number.
+
+    D returns `false` because the operands are different types.
+
+    E returns `false` because the `true` is converted into the number `1`.
+
+    F returns `true` because Boolean(2) returns `true` since 2 is nonzero.
+
+15. The `==` operator will perform the comparison after type conversion, where
+    the `===` operator will return false if the operands are different types.
+
+16. ```javascript
+    for (let val in statistics) {
+        if (val.startsWith('r') || statistics[val] % 2 === 1) {
+            console.log(statistics[val]);
+        }
+    }
+    ```
+
+17. The function returns `[ 2, 4, 6 ]`. This function will call the `callback`
+    function for each element in the array input, so each value of `array` is
+    multiplied by 2.
+
+18. ```javascript
+    setInterval(() => {
+        let d = new Date()
+        let time = d.toLocaleTimeString()
+        console.log(time)
+    }, 1000)
+    ```
+
+19. ```
+    1
+    4
+    3
+    2
+    ```
 
